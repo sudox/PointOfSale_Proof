@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale_Proof"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="800" Width="600">
     <Grid>
-        
+        <Label Name="lineItems" Margin="0,31,0,0">This is where items will be listed</Label>
+        <TextBox Name="lineInput" KeyDown="line_Input" Margin="0,0,0,739">This is where SKU's or UPC's are entered</TextBox>
     </Grid>
 </Window>
