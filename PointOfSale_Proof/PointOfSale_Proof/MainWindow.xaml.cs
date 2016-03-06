@@ -18,6 +18,7 @@ namespace PointOfSale_Proof
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -28,6 +29,7 @@ namespace PointOfSale_Proof
         public void line_Input(object sender, RoutedEventArgs e)
         {
             //Will check to see if enter was pressed, then logic for determining line items
+            StoreItems items = new StoreItems();
         }
     }
 }
