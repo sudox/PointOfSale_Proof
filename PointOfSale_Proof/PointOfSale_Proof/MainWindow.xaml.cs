@@ -26,6 +26,11 @@ namespace PointOfSale_Proof
             InitializeComponent();
         }
 
+        public void loadItems()
+        {
+            //Would load items list from SQL database, for now will hard code items in
+        }
+
         public void line_Input(object sender, RoutedEventArgs e)
         {
             //Will check to see if enter was pressed, then logic for determining line items
