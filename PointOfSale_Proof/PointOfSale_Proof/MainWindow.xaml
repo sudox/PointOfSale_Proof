@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="600">
     <Grid>
-        <Label Name="lineItems" Margin="0,31,0,0">This is where items will be listed</Label>
-        <TextBox Name="lineInput" KeyDown="line_Input" Margin="0,0,0,739">This is where SKU's or UPC's are entered</TextBox>
+        <Label Name="lineItems" Margin="0,31,0,0"></Label>
+        <TextBox Name="lineInput" KeyDown="line_Input" Margin="0,0,0,739"></TextBox>
     </Grid>
 </Window>
