@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="600">
     <Grid>
-        <Label Name="lineItems" Margin="0,31,0,0"></Label>
         <TextBox Name="lineInput" KeyDown="line_Input" Margin="0,0,0,739"></TextBox>
+        <Label x:Name="lineItems_SKU" Margin="0,31,430,90"/>
+        <Label x:Name="lineItems_Desc" Margin="162,36,162,90"/>
+        <Label x:Name="lineItems_Price" Margin="430,31,0,90"/>
+        <Label x:Name="totals" Margin="0,680,0,0"/>
     </Grid>
 </Window>

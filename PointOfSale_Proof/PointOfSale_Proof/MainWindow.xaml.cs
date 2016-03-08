@@ -63,12 +63,12 @@ namespace PointOfSale_Proof
                     //TODO Add to transaction
                     
                     //Add items to screen
-                    lineItems.Content += input;
-                    lineItems.Content += "\t\t\t\t\t";
-                    lineItems.Content += lineItem.getName();
-                    lineItems.Content += "\t\t\t\t\t$";
-                    lineItems.Content += Convert.ToString(lineItem.getPrice());
-                    lineItems.Content += "\n";
+                    lineItems_SKU.Content += input;
+                    lineItems_SKU.Content += "\n";
+                    lineItems_Desc.Content += lineItem.getName();
+                    lineItems_Desc.Content += "\n";
+                    lineItems_Price.Content += Convert.ToString(lineItem.getPrice());
+                    lineItems_Price.Content += "\n";
                 }
             }
         }
