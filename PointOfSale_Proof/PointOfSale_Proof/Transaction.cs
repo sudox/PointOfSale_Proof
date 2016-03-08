@@ -44,6 +44,10 @@ namespace PointOfSale_Proof
         public void addItemList(List<StoreItems> l)
         {
             items = l;
+            foreach(StoreItems i in l)
+            {
+                total += i.getPrice();
+            }
         }
 
         public StoreItems getItem(int location)
@@ -62,6 +66,12 @@ namespace PointOfSale_Proof
         public void addItem(StoreItems i)
         {
             items.Add(i);
+            total += i.getPrice();
+        }
+
+        public double getTotal()
+        {
+            return total;
         }
     }
 }

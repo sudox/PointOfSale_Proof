@@ -26,7 +26,6 @@ namespace PointOfSale_Proof
         public MainWindow()
         {
             InitializeComponent();
-            t = new Transaction();
         }
 
         public StoreItems checkItems(string input)
@@ -49,9 +48,14 @@ namespace PointOfSale_Proof
             return null;
         }
 
-        public void button_Click(object sender, RoutedEventArgs e)
+        public void total_Click(object sender, RoutedEventArgs e)
         {
+            if (t != null)
+            {
+                totals.Content = "$" + Convert.ToString(t.getTotal());
+            }
 
+            t = null;
         }
 
         public void line_Input(object sender, RoutedEventArgs e)
@@ -65,8 +69,19 @@ namespace PointOfSale_Proof
                 StoreItems lineItem = checkItems(input);
                 if(lineItem != null)
                 {
-                    //TODO Add to transaction
-                    
+                    //Add to transaction
+                    if(t == null)
+                    {
+                        t = new Transaction();
+
+                        lineItems_SKU.Content = "";
+                        lineItems_Desc.Content = "";
+                        lineItems_Price.Content = "";
+                        totals.Content = "";
+                    }
+
+                    t.addItem(lineItem);
+
                     //Add items to screen
                     lineItems_SKU.Content += input;
                     lineItems_SKU.Content += "\n";
@@ -76,11 +91,6 @@ namespace PointOfSale_Proof
                     lineItems_Price.Content += "\n";
                 }
             }
-        }
-
-        private void total_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
