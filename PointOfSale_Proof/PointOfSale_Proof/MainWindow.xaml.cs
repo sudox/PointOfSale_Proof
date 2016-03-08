@@ -49,9 +49,14 @@ namespace PointOfSale_Proof
             return null;
         }
 
+        public void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         public void line_Input(object sender, RoutedEventArgs e)
         {
-            //Will check to see if enter was pressed, then logic for determining line items
+            //Will check to see if enter was pressed, then logic for determining line item
             if(Keyboard.IsKeyDown(Key.Enter))
             {
                 string input = lineInput.Text;
@@ -71,6 +76,11 @@ namespace PointOfSale_Proof
                     lineItems_Price.Content += "\n";
                 }
             }
+        }
+
+        private void total_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
